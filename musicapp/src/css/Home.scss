@@ -1,0 +1,142 @@
+$black:#191414;
+$green:#1DB954;
+$onyx-black:#353839;
+$white:#ffffff;
+$grey:#f2f2f2cf;
+$shadow: 0px 0px 5px $grey,0px 0px 10px $grey;
+$gold:gold;
+$red:red;
+$orange:orange;
+$lightshadow: 0px 1px 2px $grey;
+
+.home-container{
+    width: 100%;
+
+   .previous-container-main{
+     
+     h2{
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .previous-container{
+        background-color: transparent;
+        display: flex;
+        overflow-x: scroll;
+        height: 100px;
+        align-items: center;
+        box-shadow: $lightshadow;
+        padding: 0px 20px;
+
+        div{
+            margin-right: 20px;
+        }
+    }
+   }
+   .new-note-heading{
+     margin-top: 70px;
+    text-align: center;
+   }
+   .add-new-note{
+       height: 140px;
+       width: 200px;
+       
+       margin: auto;
+       margin-top: 20px;
+       padding: 20px;
+       position: relative;
+       box-shadow: $shadow;
+       .plus-icon{
+         font-size: 90px;
+         left: 32%;
+         top: 20%;
+         position: absolute;
+        
+       }
+   }
+
+   
+
+}
+
+.new-note-modal{
+    height: max(60vh,440px);
+    background-color: $white;
+    width: 50%;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    border-radius: 10px;
+    color: $black ;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 1;
+    transition: all 500ms ease;
+    z-index: 9999;
+    .note-modal-header{
+        
+        height: 15%;
+        display: flex;
+        padding: 10px;
+        box-sizing: border-box;
+        align-items: center;
+        .title{
+            flex: 3;
+            text-align: center;
+        }
+        .cross-icon{
+            margin-right: 15px;
+        }
+    }
+    .note-modal-body{
+        height: 65%;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        input{
+            height: 50px;
+            margin-bottom: 50px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        textarea{
+            resize: none;
+            height: 180px;
+            padding: 10px;
+            overflow-y: scroll;
+        }
+        :focus{
+
+            outline: none;
+        }
+    }
+    .note-modal-footer{
+        
+        height: 19%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 60px;
+        align-items: center;
+        button{
+            height: 40px;
+            width: 70px;
+            background-color: $green;
+            border: 0;
+            border-radius: 8px;
+            color: $white;
+        }
+        button:nth-child(1){
+            background-color: $red;
+        }
+    }
+
+}
+
+
+@media all and (max-width:850px){
+    .new-note-modal{
+        left: 10%;
+        width: 80%;
+    }
+   
+    
+}

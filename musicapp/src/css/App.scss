@@ -1,0 +1,184 @@
+@import url('./Home.scss');
+@import url('./Library.scss');
+@import url('./Search.scss');
+@import url('./Mini.scss');
+@import url('./Sidebar.scss');
+
+$black:#191414;
+$green:#1DB954;
+$onyx-black:#353839;
+$white:#ffffff;
+$grey:#f2f2f2cf;
+$shadow: 0px 0px 5px $grey,0px 0px 10px $grey;
+$gold:gold;
+$red:red;
+$orange:orange;
+
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  
+
+}
+
+li{
+  list-style: none;
+}
+// utility classes
+
+.active{
+  color: $green;
+}
+.activeTwo{
+  color: $gold;
+}
+
+.dispayNone{
+  display: none !important;
+}
+
+.dismissModal{
+  transform: translate(0,-200%);
+  opacity: 0;
+}
+
+.dismissSidebar{
+  transform: translate(200%,0%);
+  
+  display: none;
+}
+
+// ---------end 
+
+
+// ----- auth page codes
+.auth-container{
+ 
+  img{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    filter: brightness(20%);
+    margin-top: 0px !important;
+  }
+  .form-container{
+    color: $white;
+    height: max(45vh,340px,auto);
+    background-color: transparent;
+    width: max(45vw,510px);
+    padding: 20px;
+    margin: auto;
+    transform: translate(0px,100px);
+    border-radius: 8px;
+    box-shadow: $shadow;
+    
+
+    .form-container-header{
+      
+      display: flex;
+      height: 60px;
+      align-items: center;
+      margin-bottom: 20px;
+      h2{
+        flex: 1;
+        text-align: center;
+        li{
+          transition: all 500ms ease;
+        }
+      }
+    }
+    form{
+      margin: 0px 60px;
+        div{
+          display: flex;
+          flex-direction: column;
+          
+          margin-bottom: 20px;
+          
+          input{
+            margin: 5px 0px;
+            height: 40px;
+            border-radius: 5px;
+            padding: 5px;
+            box-sizing: border-box;
+          }
+          input:focus{
+            outline: none;
+            border-color: $grey;
+            border-width: 4px;
+
+          }
+        }
+        button{
+          height: 40px;
+          width: 40%;
+          display: block;
+          margin: auto;
+          background-color: $green;
+          color: $white;
+          border: 0;
+          border-radius: 4px;
+          margin-top: 40px;
+        }
+      
+    }
+  }
+
+
+
+}
+
+@media all and (max-width:766px){
+  .auth-container{
+    .form-container{
+      width: 70%;
+      form{
+        margin: 0px 5px;
+      }
+    }
+  }
+
+}
+
+// ---- end
+
+// ------ home page codes
+
+.main-app{
+ 
+  height: 100vh;
+  width: 100%;
+  .app-header{
+    background-color: $green;
+    color: $white;
+    height: 10%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    h2{
+      flex: 1;
+    }
+    ul{
+      flex: 3;
+      display: flex;
+     text-align: center;
+      li{
+        flex: 1;
+        transition: all 500ms ease;
+      }
+    }
+  }
+  .app-container{
+    background-color: $onyx-black;
+    color: $white;
+    height: 90%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    
+  }
+}
